@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    Создать таск
+{% endblock %}
+
+{% block content %}
+    <h3 style="color:blue; font-family: 'Open Sans', sans-serif">Create notice</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.task }}<br>
+        <button type="submit" class="btn btn-success" style="border-radius: 5px; background-color: blue; color: white">Add</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
